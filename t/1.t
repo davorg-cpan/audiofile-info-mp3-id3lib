@@ -15,7 +15,8 @@ ok(1);
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.
 
-my $song = AudioFile::Info->new('t/test.mp3');
+my $song = AudioFile::Info->new('t/test.mp3',
+                                { mp3 => 'AudioFile::Info::MP3::ID3Lib' });
 ok(ref $song eq 'AudioFile::Info::MP3::ID3Lib');
 ok($song->title eq 'test');
 ok($song->artist eq 'davorg');
