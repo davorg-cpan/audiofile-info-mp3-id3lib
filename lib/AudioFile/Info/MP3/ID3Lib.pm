@@ -40,6 +40,7 @@ sub AUTOLOAD {
       if($_->code eq $data{$sub}) {
 	$found = 1;
 	$_->set($attr);
+        last;
       }
     }
 
