@@ -44,11 +44,14 @@ __END__
 
 =head1 NAME
 
-AudioFile::Info::MP3 - Perl extension to get info from MP3 files.
+AudioFile::Info::MP3::ID3Lib - Perl extension to get info from MP3 files.
 
 =head1 DESCRIPTION
 
-See L<AudioFile::Info>.
+This is a plugin for AudioFile::Info which uses MP3::ID3Lib to get
+data about MP files.
+
+See L<AudioFile::Info> for more details.
 
 =head1 AUTHOR
 
