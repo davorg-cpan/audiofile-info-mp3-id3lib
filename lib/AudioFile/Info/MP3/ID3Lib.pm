@@ -33,6 +33,20 @@ sub AUTOLOAD {
 
   die "Invalid attribute $sub" unless exists $data{$sub};
 
+  if ($_[1]) {
+    my $attr = $_[1];
+    my $found;
+    for (@{$_[0]->{obj}->frames}) {
+      if($_->code eq $data{$sub}) {
+	$found = 1;
+	$_->set($attr);
+      }
+    }
+
+    $_[0]->{obj}->add_frame($data{$sub}, $attr) unless $found;
+    $_[0]->{obj}->commit;
+  }
+
   for (@{$_[0]->{obj}->frames}) {
     return $_->value if $_->code eq $data{$sub};
   }
