@@ -22,7 +22,7 @@ $b->create_build_script;
 $b->notes(package => $module);
 $b->notes(config  => {
                       read_mp3 => 1,
-                      write_mp3 => 0,
+                      write_mp3 => 1,
                       read_ogg => 0,
                       write_ogg => 0,
                       pure_perl => 0
