@@ -5,5 +5,7 @@ META.yml
 README
 lib/AudioFile/Info/Build.pm
 lib/AudioFile/Info/MP3/ID3Lib.pm
-t/1.t
+t/1_read.t
+t/2_write.t
+t/3_pod.t
 t/test.mp3
