@@ -68,6 +68,13 @@ data about MP files.
 
 See L<AudioFile::Info> for more details.
 
+=head1 METHODS
+
+=head2 new
+
+Creates a new object of class AudioFile::Info::MP3::ID3Lib. Usually called
+by AudioFile::Info::new.
+
 =head1 AUTHOR
 
 Dave Cross, E<lt>dave@dave.org.ukE<gt>
