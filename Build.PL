@@ -4,16 +4,18 @@ use AudioFile::Info::Build;
 my $module = 'AudioFile::Info::MP3::ID3Lib';
 
 my $b = AudioFile::Info::Build->new(module_name => $module,
+                                    dist_version => '1.06',
                                     license => 'perl',
                                     requires => {
                                                  perl            => '5.6.0',
                                                  AudioFile::Info => 0,
                                                  MP3::ID3Lib     => 0,
+                                                 YAML            => 0,
                                                 },
-                                    build_requires => {
+                                    build_recommends => {
                                                  Module::Build   => 0
                                                 },
-                                    create_makefile_pl => 'passthrough',
+                                    create_makefile_pl => 'traditional',
                                     dynamic_config => 1,
                                    );
 
