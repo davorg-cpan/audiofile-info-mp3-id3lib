@@ -4,7 +4,7 @@ use AudioFile::Info::Build;
 my $module = 'AudioFile::Info::MP3::ID3Lib';
 
 my $b = AudioFile::Info::Build->new(module_name => $module,
-                                    dist_version => '1.06',
+                                    dist_version => '1.07',
                                     license => 'perl',
                                     requires => {
                                                  perl            => '5.6.0',
