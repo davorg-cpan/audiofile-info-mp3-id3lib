@@ -5,6 +5,8 @@ use strict;
 use warnings;
 use Carp;
 
+our $VERSION = '1.7.1';
+
 use MP3::ID3Lib;
 
 my %data = (artist => 'TPE1',
