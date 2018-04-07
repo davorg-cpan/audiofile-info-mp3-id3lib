@@ -38,8 +38,8 @@ sub AUTOLOAD {
     my $found;
     for (@{$_[0]->{obj}->frames}) {
       if($_->code eq $data{$sub}) {
-	$found = 1;
-	$_->set($attr);
+      $found = 1;
+      $_->set($attr);
         last;
       }
     }
