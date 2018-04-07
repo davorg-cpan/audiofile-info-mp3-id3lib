@@ -10,7 +10,7 @@ use warnings;
 
 use Test::More tests => 8;
 
-BEGIN { use_ok('AudioFile::Info') };
+BEGIN { use_ok('AudioFile::Info') }
 
 #########################
 
