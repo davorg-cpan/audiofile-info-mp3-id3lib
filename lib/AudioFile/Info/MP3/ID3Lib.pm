@@ -1,3 +1,5 @@
+use compat::perl7;
+
 package AudioFile::Info::MP3::ID3Lib;
 
 use 5.006;
