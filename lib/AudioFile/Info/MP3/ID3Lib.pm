@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '1.7.3';
+our $VERSION = '1.7.4';
 
 use MP3::ID3Lib;
 
