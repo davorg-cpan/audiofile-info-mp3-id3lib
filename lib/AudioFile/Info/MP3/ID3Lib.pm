@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '1.8.0';
+our $VERSION = '1.8.1';
 
 use MP3::ID3Lib;
 
@@ -20,7 +20,7 @@ sub new {
   my $class = shift;
   my $file = shift;
 
-  die "Missing mp3 file." unless defined $file;
+  croak __PACKAGE__ . '->new called without an MP3 file' unless defined $file;
   my $obj = MP3::ID3Lib->new($file);
 
   bless { obj => $obj }, $class;
