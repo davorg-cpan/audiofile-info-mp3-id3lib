@@ -19,6 +19,8 @@ my %data = (artist => 'TPE1',
 sub new {
   my $class = shift;
   my $file = shift;
+
+  die "Missing mp3 file." unless defined $file;
   my $obj = MP3::ID3Lib->new($file);
 
   bless { obj => $obj }, $class;
