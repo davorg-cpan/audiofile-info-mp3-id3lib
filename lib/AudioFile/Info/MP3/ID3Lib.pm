@@ -39,9 +39,9 @@ sub AUTOLOAD {
     my $attr = $_[1];
     my $found;
     for (@{$_[0]->{obj}->frames}) {
-      if($_->code eq $data{$sub}) {
-      $found = 1;
-      $_->set($attr);
+      if ($_->code eq $data{$sub}) {
+        $found = 1;
+        $_->set($attr);
         last;
       }
     }
