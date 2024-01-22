@@ -27,6 +27,21 @@ jobs:
       - run: cpanm --installdeps .
       - run: prove -lv t
 
+  coverage:
+    runs-on: 'ubuntu-latest'
+    container: davorg/perl-coveralls:latest
+    name: Test Coverage
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq
+      - run: sudo apt-get install -y libid3-3.8.3-dev
+      - run: perl -V
+      - run: cpanm --installdeps .
+      - name: Coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cover -test -report Coveralls
+
   perlcritic:
     uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-perlcritic.yml@main
 
